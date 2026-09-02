@@ -36,7 +36,13 @@
   .pdf-btn svg { flex-shrink: 0; }
 
   @media print {
-    body { background: none; padding: 0; }
+    @page { size: A4; margin: 0; }
+    body {
+      background: #dde1e7;
+      padding: 0;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
     .pdf-btn { display: none; }
     .nav { display: none; }
     .panel { display: flex !important; }
@@ -148,8 +154,8 @@
   .skill-label { font-size: 12px; font-weight: 600; color: #333; }
   .skill-dots { display: flex; gap: 3px; flex-shrink: 0; margin-left: 10px; }
   .dot {
-    width: 6px; height: 6px; border-radius: 50%;
-    background: #e0e3eb;
+    width: 7px; height: 7px; border-radius: 50%;
+    background: #e0e3eb; border: 1px solid #c9a84c;
   }
   .dot.filled { background: #c9a84c; }
 
