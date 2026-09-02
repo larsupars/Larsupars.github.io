@@ -8,19 +8,15 @@
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<button class="pdf-btn" onclick="window.print()">
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+    Download CV
+  </button>
+
 <div class="page">
 
   <!-- Header -->
   <div class="header">
-    <div class="photo-frame" onclick="document.getElementById('photoInput').click()" title="Klik om foto te uploaden">
-      <img id="profilePhoto" src="" alt="Profielfoto">
-      <div class="photo-placeholder" id="photoPlaceholder">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.5"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-        Upload foto
-      </div>
-    </div>
-    <input type="file" id="photoInput" accept="image/*">
-
     <div class="header-info">
       <h1>Lars van Hulzen</h1>
       <div class="subtitle">Web Developer &amp; Applicatie Ontwikkeling</div>
@@ -35,19 +31,23 @@
         </a>
         <span class="pill">
           <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-          Sprundel, Nederland
+          Etten-Leur, Nederland
         </span>
+        <a class="pill" href="https://www.linkedin.com/in/larsvanhulzen/" target="_blank" rel="noopener">
+          <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+          LinkedIn
+        </a>
       </div>
     </div>
   </div>
   <div class="gold-bar"></div>
 
-  <!-- Nav -->
+  <!-- Nav
   <div class="nav">
     <div class="nav-tab active" onclick="switchTab('cv')">CV</div>
     <div class="nav-tab" onclick="switchTab('projects')">Projecten</div>
     <div class="nav-tab" onclick="switchTab('contact')">Contact</div>
-  </div>
+  </div> -->
 
   <!-- CV Panel -->
   <div class="panel active" id="panel-cv">
@@ -56,54 +56,106 @@
 
         <div class="section">
           <div class="section-title">Technische Vaardigheden</div>
+
+          <div class="skills-subhead">Talen &amp; Frameworks</div>
           <div class="skill-item">
             <div class="skill-label">HTML &amp; CSS</div>
-            <div class="skill-bar"><div class="skill-fill" style="width:88%"></div></div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">TypeScript</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">JavaScript</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">React</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">PHP</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Laravel</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
           </div>
           <div class="skill-item">
             <div class="skill-label">C#</div>
-            <div class="skill-bar"><div class="skill-fill" style="width:80%"></div></div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+
+          <div class="skills-subhead">Tools &amp; Infrastructuur</div>
+          <div class="skill-item">
+            <div class="skill-label">Git</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">Docker</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
           </div>
           <div class="skill-item">
             <div class="skill-label">Azure</div>
-            <div class="skill-bar"><div class="skill-fill" style="width:72%"></div></div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">PHP / Back-end Plugins</div>
-            <div class="skill-bar"><div class="skill-fill" style="width:78%"></div></div>
+            <div class="skill-label">Azure DevOps</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span>
+            </div>
           </div>
           <div class="skill-item">
-            <div class="skill-label">SEO &amp; Front-end Optimalisatie</div>
-            <div class="skill-bar"><div class="skill-fill" style="width:75%"></div></div>
+            <div class="skill-label">WordPress</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">SQL</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span>
+            </div>
+          </div>
+          <div class="skill-item">
+            <div class="skill-label">NoSQL</div>
+            <div class="skill-dots">
+              <span class="dot filled"></span><span class="dot filled"></span><span class="dot filled"></span><span class="dot"></span><span class="dot"></span>
+            </div>
           </div>
         </div>
 
         <div class="section">
           <div class="section-title">Certificaten</div>
-          <a class="cert-link" href="https://ecdl.org" target="_blank">
+          <a class="cert-link" href="https://www.w3schools.com/cert/cert_java.asp" target="_blank">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            ECDL
-          </a>
-          <a class="cert-link" href="https://www.w3schools.com/cert/cert_css.asp" target="_blank">
-            <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            W3S CSS &amp; HTML
+            Azure Fundamentals — Microsoft
           </a>
           <a class="cert-link" href="https://www.w3schools.com/cert/cert_java.asp" target="_blank">
             <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-            W3S Java
+            Azure Data Fundamentals — Microsoft
           </a>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Vrijwilligerswerk</div>
-          <div class="side-item">Popelucht - Nobelaer</div>
-          <div class="side-item">Diverse activiteiten — Lokale verenigingen</div>
-        </div>
-
-        <div class="section">
-          <div class="section-title">Interesses</div>
-          <div class="side-item">Muziekaal bezig zijn</div>
-          <div class="side-item">Live muziek &amp; concerten</div>
         </div>
 
       </div>
@@ -113,24 +165,28 @@
         <div class="section">
           <div class="section-title">Professioneel Profiel</div>
           <p class="profile-text">
-            Resultaatgerichte web developer met aantoonbare ervaring in zowel back-end als front-end webontwikkeling. Gespecialiseerd in maatwerkontwikkeling met C# en cloudoplossingen via Azure, aangevuld met een sterke basis in front-end technologieën en SEO. Beschikt over een solide technische achtergrond opgedaan tijdens meerdere stages en een lopende hbo-opleiding Informatica. Leergierig, praktisch ingesteld en gericht op het leveren van kwalitatief hoogwaardige digitale oplossingen.
-          </p>
+            Resultaatgerichte developer met ervaring in zowel back-end als front-end softwareontwikkeling. Gespecialiseerd in het ontwikkelen van maatwerkoplossingen en het integreren van verschillende systemen, met aandacht voor kwaliteit, betrouwbaarheid en onderhoudbaarheid. Beschikt over een brede technische basis, opgebouwd tijdens meerdere stages en een hbo-opleiding Informatica. Leergierig, praktisch ingesteld en gedreven om efficiënte en kwalitatief hoogwaardige digitale oplossingen te realiseren.</p>
         </div>
 
         <div class="section">
           <div class="section-title">Werkervaring</div>
+
           <div class="tl-item">
             <div class="tl-header">
-              <div class="tl-company">WeTalkSEO</div>
-              <div class="tl-period">2019 - heden</div>
+              <div class="tl-company">VCSObservation</div>
+              <div class="tl-period">2019 · heden</div>
             </div>
-            <div class="tl-role">Software Developer</div>
+            <div class="tl-role">Full Stack Developer</div>
+            <div class="tl-hours">Opgebouwd van 1 dag per week naast Associate Degree, via ±30 uur tijdens Bachelor, tot fulltime na afstuderen</div>
             <ul class="tl-bullets">
-              <li>Analyseerde en verbeterde de technische en inhoudelijke kwaliteit van bestaande websites.</li>
-              <li>Optimaliseerde paginastructuur, laadsnelheid en contenthiërarchie voor hogere organische vindbaarheid.</li>
-              <li>Werkte nauw samen met het SEO-team om meetbare verbeteringen in zoekrankings te realiseren.</li>
+              <li>Meewerken en denken om bestaande applicaties en architecturen structureel te verbeteren, van database-ontwerp tot front-end implementatie.</li>
+              <li>Nieuwe technieken en frameworks onderzoeken, evalueren en integreren in het bestaande applicatielandschap, met oog voor onderhoudbaarheid op lange termijn.</li>
+              <li>Platformen bouwen die er toe doen: van klantgerichte features tot interne tooling die het ontwikkelproces versnelt.</li>
+              <li>Samenwerken binnen een scrumteam aan sprintplanning, code reviews en technische besluitvorming.</li>
+              <li>Gebruik van Git voor versiebeheer en Azure DevOps voor CI/CD-pipelines en deployment.</li>
             </ul>
           </div>
+
           <div class="tl-item">
             <div class="tl-header">
               <div class="tl-company">WeTalkSEO</div>
@@ -138,11 +194,13 @@
             </div>
             <div class="tl-role">Front-end Developer &amp; SEO Specialist</div>
             <ul class="tl-bullets">
-              <li>Analyseerde en verbeterde de technische en inhoudelijke kwaliteit van bestaande websites.</li>
-              <li>Optimaliseerde paginastructuur, laadsnelheid en contenthiërarchie voor hogere organische vindbaarheid.</li>
-              <li>Werkte nauw samen met het SEO-team om meetbare verbeteringen in zoekrankings te realiseren.</li>
+              <li>Analyseerde en verbeterde de technische en inhoudelijke kwaliteit van bestaande websites op basis van SEO-audits.</li>
+              <li>Optimaliseerde paginastructuur, laadsnelheid en contenthiërarchie voor hogere organische vindbaarheid in zoekmachines.</li>
+              <li>Werkte nauw samen met het SEO-team om meetbare verbeteringen in zoekrankings te realiseren voor meerdere klantprojecten.</li>
+              <li>Implementeerde front-end aanpassingen in HTML, CSS en JavaScript op basis van SEO-aanbevelingen.</li>
             </ul>
           </div>
+
           <div class="tl-item">
             <div class="tl-header">
               <div class="tl-company">Silva's</div>
@@ -150,9 +208,10 @@
             </div>
             <div class="tl-role">Back-end Developer</div>
             <ul class="tl-bullets">
-              <li>Ontwikkelde op maat gemaakte websites met volledig zelfgeschreven back-end plugins.</li>
+              <li>Ontwikkelde op maat gemaakte WordPress-websites met volledig zelfgeschreven back-end plugins in PHP.</li>
               <li>Vertaalde klantspecifieke functionele eisen naar stabiele, schaalbare technische oplossingen.</li>
-              <li>Droeg bij aan codekwaliteit en onderhoudbaarheid van de plugin-architectuur.</li>
+              <li>Droeg bij aan codekwaliteit en onderhoudbaarheid van de plugin-architectuur door middel van gestructureerde documentatie.</li>
+              <li>Werkte met SQL-databases voor het opslaan en beheren van klant- en productgegevens.</li>
             </ul>
           </div>
         </div>
@@ -161,7 +220,7 @@
           <div class="section-title">Opleiding</div>
           <div class="edu-item">
             <div class="edu-header">
-              <div class="edu-degree">HBO Informatica</div>
+              <div class="edu-degree">HBO Bachelor Informatica</div>
               <div class="edu-period">2021 - 2023</div>
             </div>
             <div class="edu-school">Avans Hogeschool</div>
@@ -179,12 +238,6 @@
               <div class="edu-period">2015 - 2019</div>
             </div>
             <div class="edu-school">Zoomvliet College</div>
-          </div>
-          <div class="edu-item">
-            <div class="edu-header">
-              <div class="edu-degree">HAVO Natuur &amp; Technologie + ICT</div>
-              <div class="edu-period">2010 - 2015</div>
-            </div>
           </div>
         </div>
 
@@ -215,9 +268,15 @@
           <span class="stack-tag">SEO</span>
         </div>
       </div>
-      <div class="project-add" onclick="this.innerHTML='<span style=\'font-size:11px;letter-spacing:1px;color:#c9a84c\'>Voeg je eigen projecten toe!</span>'">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-        Project toevoegen
+      <div class="project-card">
+        <div class="project-tag">SEO · 2019</div>
+        <div class="project-title">SEO Optimalisatietraject</div>
+        <div class="project-desc">Technische en inhoudelijke optimalisatie van meerdere WordPress-websites bij WeTalkSEO, resulterend in verbeterde Google-rankings en gebruikerservaring.</div>
+        <div class="project-stack">
+          <span class="stack-tag">HTML</span>
+          <span class="stack-tag">CSS</span>
+          <span class="stack-tag">SEO</span>
+        </div>
       </div>
     </div>
   </div>
@@ -244,9 +303,9 @@
           <span class="cc-label">Telefoon</span>
           <span class="cc-value">0630522291</span>
         </a>
-        <a class="contact-card" href="https://linkedin.com" target="_blank">
+        <a class="contact-card" href="https://www.linkedin.com/in/larsvanhulzen/" target="_blank">
           <div class="icon-circle">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#c9a84c" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
           </div>
           <span class="cc-label">LinkedIn</span>
           <span class="cc-value">Profiel bekijken</span>
@@ -255,7 +314,7 @@
     </div>
   </div>
 
-  <div class="footer">© 2024 Lars van Hulzen &nbsp;·&nbsp; larsvanhulzen@gmail.com &nbsp;·&nbsp; Sprundel, Nederland</div>
+  <!-- <div class="footer">© 2026 Lars van Hulzen &nbsp;·&nbsp; larsvanhulzen@gmail.com &nbsp;·&nbsp; Etten-Leur, Nederland</div> -->
 
 </div>
 
@@ -267,20 +326,6 @@
     event.target.classList.add('active');
     document.getElementById('panel-' + name).classList.add('active');
   }
-
-  // Photo upload
-  document.getElementById('photoInput').addEventListener('change', function(e) {
-    const file = e.target.files[0];
-    if (!file) return;
-    const reader = new FileReader();
-    reader.onload = function(ev) {
-      const img = document.getElementById('profilePhoto');
-      img.src = ev.target.result;
-      img.style.display = 'block';
-      document.getElementById('photoPlaceholder').style.display = 'none';
-    };
-    reader.readAsDataURL(file);
-  });
 </script>
 </body>
 </html>
